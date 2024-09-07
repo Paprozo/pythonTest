@@ -1,7 +1,6 @@
 import sys
 
-path = int(sys.argv[1])
-path = input('Введите путь к файлу: ')
+path = sys.argv[1]
 file = open(path, 'r')
 array = list(map(int, file.read().split("\n")))
 median = round(sum(array)/len(array))
@@ -11,5 +10,5 @@ for element in array:
         result += element - median
     else:
         result += median - element
-
+print(median)
 print(result)

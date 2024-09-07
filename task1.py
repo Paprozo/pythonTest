@@ -6,7 +6,7 @@ i = 1
 flag = False
 while flag == False:
     i += m - 1
-    if i>n:
+    while i>n:
         i = i - n    
     if i == 1:
         flag = True

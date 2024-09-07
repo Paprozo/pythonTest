@@ -27,5 +27,5 @@ tests = json.load(file1)
 values = json.load(file2)
 res = find(tests['tests'], values['values'])
 result = {'tests':[]}
-result['tests'].append(res)
+result['tests'] = res
 json.dump(result, file3, indent=4)
