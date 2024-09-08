@@ -2,7 +2,10 @@ import sys
 
 path = sys.argv[1]
 file = open(path, 'r')
-array = list(map(int, file.read().split("\n")))
+array = []
+for line in file:
+    if line.strip():
+        array.append(int(line))
 median = round(sum(array)/len(array))
 result = 0
 for element in array:
@@ -10,5 +13,4 @@ for element in array:
         result += element - median
     else:
         result += median - element
-print(median)
 print(result)
