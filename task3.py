@@ -17,7 +17,7 @@ def find(tests, values):
             test['values'] = find(test['values'], values)
         result.append(test)
     return result
-
+##test task
 
 path1, path2, path3 = sys.argv[1], sys.argv[2], sys.argv[3]
 file1 = open(path1, 'r')
